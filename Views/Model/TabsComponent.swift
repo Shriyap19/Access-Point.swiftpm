@@ -18,21 +18,21 @@ struct TabsComponent: View {
                 .tabItem {
                     Label("Map", systemImage: "map.fill")
                 }
-
-            Text("Board ")
+            BoardView()
                 .tabItem {
-                    Label("Board", systemImage: "person")
+                    Label("Board", systemImage: "message")
+                    
                 }
             Text("Contribute ")
                 .tabItem {
-                    Label("Contribute", systemImage: "hand")
+                    Label("Contribute", systemImage: "hand.raised")
                 }
             Text("Settings ")
                 .tabItem {
                     Label("Settings", systemImage: "gear")
                 }
             
-        }.tint(.blue)
+        }.tint(.blue).environment(\.horizontalSizeClass, .compact)
 
         
         
