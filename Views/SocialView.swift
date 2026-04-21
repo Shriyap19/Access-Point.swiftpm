@@ -9,6 +9,8 @@ import SwiftUI
 struct SocialView: View {
     @State private var selection = 0
     var body: some View {
-        Text("jjjjj")
+        VStack {
+            PostView()
+        }
     }
 }
