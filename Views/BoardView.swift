@@ -11,7 +11,7 @@ struct BoardView: View {
     @State private var selection = 0
     var body: some View {
         NavigationStack {
-            VStack {
+            VStack() {
                 if selection == 0 {
                     SocialView()
                 } else {
