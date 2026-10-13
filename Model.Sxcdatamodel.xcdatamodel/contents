@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="25249" systemVersion="25G83" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
+    <entity name="Forumpost" representedClassName="Forumpost" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="text" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="users" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Users" inverseName="basicInfo" inverseEntity="Users"/>
+    </entity>
+    <entity name="Jobpost" representedClassName="Jobpost" syncable="YES">
+        <attribute name="heading" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="info" optional="YES" attributeType="String"/>
+        <relationship name="users2" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Users" inverseName="basicinfo2" inverseEntity="Users"/>
+    </entity>
+    <entity name="Markers" representedClassName="Markers" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="latitude" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Users" representedClassName="Users" syncable="YES">
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="username" optional="YES" attributeType="String"/>
+        <relationship name="basicInfo" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Forumpost" inverseName="users" inverseEntity="Forumpost"/>
+        <relationship name="basicinfo2" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Jobpost" inverseName="users2" inverseEntity="Jobpost"/>
+    </entity>
+</model>

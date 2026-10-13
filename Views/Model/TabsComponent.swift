@@ -8,13 +8,14 @@
 import SwiftUI
 
 
+
 struct TabsComponent: View {
     
     
     
     var body: some View {
         TabView {
-            Text("Map")
+            MapView()
                 .tabItem {
                     Label("Map", systemImage: "map.fill")
                 }
@@ -23,11 +24,11 @@ struct TabsComponent: View {
                     Label("Board", systemImage: "message")
                     
                 }
-            Text("Contribute ")
+            ContributeView()
                 .tabItem {
                     Label("Contribute", systemImage: "hand.raised")
                 }
-            Text("Settings ")
+            SettingsView()
                 .tabItem {
                     Label("Settings", systemImage: "gear")
                 }

@@ -25,7 +25,7 @@ struct BoardView: View {
                                Text("Social").tag(0)
                                Text("Oppurtunites").tag(1)
                            }
-                    .pickerStyle(SegmentedPickerStyle()).frame(width: 300)
+                    .pickerStyle(SegmentedPickerStyle()).frame(width: 260).background(.ultraThinMaterial)
 
                     
                 }

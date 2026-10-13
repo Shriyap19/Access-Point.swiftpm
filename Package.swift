@@ -16,7 +16,7 @@ let package = Package(
         .iOSApplication(
             name: "Access Point",
             targets: ["AppModule"],
-            bundleIdentifier: "Shriya-and-Shriya.Access-Point",
+            bundleIdentifier: "com.shriyapatel.AccessPoint.",
             teamIdentifier: "P388JWQBMB",
             displayVersion: "1.0",
             bundleVersion: "1",
@@ -31,6 +31,10 @@ let package = Package(
                 .landscapeRight,
                 .landscapeLeft,
                 .portraitUpsideDown(.when(deviceFamilies: [.pad]))
+            ],
+            capabilities: [
+                .incomingNetworkConnections(),
+                .outgoingNetworkConnections()
             ]
         )
     ],
@@ -39,6 +43,5 @@ let package = Package(
             name: "AppModule",
             path: "."
         )
-    ],
-    swiftLanguageVersions: [.v6]
+    ]
 )
